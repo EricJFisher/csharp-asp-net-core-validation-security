@@ -10,13 +10,16 @@ namespace ConferenceTracker.Entities
         public int Id { get; set; }
         [Required]
         [DataType(DataType.Text)]
+        [StringLength(100, MinimumLength = 2)]
         [Display(Name = "First name")]
         public string FirstName { get; set; }
         [Required]
         [DataType(DataType.Text)]
+        [StringLength(100, MinimumLength = 2)]
         [Display(Name = "Last name")]
         public string LastName { get; set; }
         [Required]
+        [StringLength(500, MinimumLength = 10)]
         [DataType(DataType.MultilineText)]
         public string Description { get; set; }
         [DataType(DataType.EmailAddress)]
